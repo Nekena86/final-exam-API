@@ -42,8 +42,13 @@ def read_car(id:String):
 
 
 @app.put("/cars/{id}/characteristics")
-def update_characteristics():
-    return {}
+def update_characteristics(max_speed:int,max_fuel_capacity:int,id:String):
+    if id in list:
+        object.max_speed = max_speed
+        object.max_fuel_capacity = max_fuel_capacity
+        return {JSONResponse(object )}
+    else:
+        return {JSONResponse("id fourni n'existe pas ou n'a pas ete trouve",status_code=404)}
 
 
 
